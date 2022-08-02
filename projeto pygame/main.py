@@ -121,7 +121,7 @@ while rodando:
     asteroid_rect.y = asteroideY
 
     #movimentos
-    asteroidX -= 0.5
+    asteroidX -= 0.1 * pontos
     missilX += missil_x_vel
 
     #respawn
@@ -151,6 +151,10 @@ while rodando:
     screen.blit(nave,(naveX,naveY))
     screen.blit(asteroide,(asteroidX,asteroideY))
 
+
+    pygame.draw.rect(screen,(255,0,0), missil_rect,4)
+    pygame.draw.rect(screen,(255,0,0), asteroid_rect,4)
+    pygame.draw.rect(screen,(255,0,0),  nave_rect,4)
 
     
     
